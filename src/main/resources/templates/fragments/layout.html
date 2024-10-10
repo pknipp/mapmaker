@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" th:fragment="layout (template, menu)" lang="en">
 <head>
-    <title>Java starter</title>
+    <title>mapmaker</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css"/>
     <script>
-        let mapmaker = localStorage.getItem("mapmaker");
-        console.log("mapmaker = ", mapmaker);
-        let maps = JSON.parse(mapmaker?.maps) || [];
+        let mapmaker = localStorage.getItem("mapmaker") || JSON.stringify({maps: []});
+        let maps = JSON.parse(mapmaker).maps;
     </script>
 </head>
 
