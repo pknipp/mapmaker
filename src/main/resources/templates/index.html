@@ -9,16 +9,16 @@
         with Java on Heroku</a> tutorial.
     </div>
     <div id="map-list"></div>
-    <script>
-        document.getElementById("map-list").innerHTML =
-            maps.length ? `Your maps are listed below.` : "You do not yet have any maps."
-        ;
-    </script>
     <ul th:if="${maps != null}">
         <li th:each="map : ${maps}">
             <span th:text="${map}"></span>
         </li>
     </ul>
+    <script>
+        document.getElementById("map-list").innerHTML =
+            maps.length ? `Your maps are listed below.` : "You do not yet have any maps."
+        ;
+    </script>
 </div>
 
 </body>
