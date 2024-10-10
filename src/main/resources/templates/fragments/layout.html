@@ -6,7 +6,9 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css"/>
     <script>
-        let maps = JSON.parse(localStorage.getItem("mapmaker")?.maps) || [];
+        let mapmaker = localStorage.getItem("mapmaker");
+        console.log("mapmaker = ", mapmaker);
+        let maps = JSON.parse(mapmaker?.maps) || [];
     </script>
 </head>
 
